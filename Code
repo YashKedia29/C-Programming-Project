@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+void main() 
+{
+    char c[50];
+    char *songs[7] = 
+    {
+        "ApnaBanaLe.mp3",
+        "KinniKinni.mp3",
+        "Haantumho.mp3",
+        "Kalank.mp3",
+        "TeraHokeRahoon.mp3",
+        "TereMere.mp3",
+        "CallItWhatYouWant.mp3"
+    };
+    for (int i=0;i<7;i++) 
+    {
+        printf("Now playing: %s\n", songs[i]);
+        sprintf(c, "start %s", songs[i]);
+        system(c);
+        printf("Press Enter to play the next song...\n");
+        getchar();
+    }
+}
